@@ -45,16 +45,52 @@
       }
       .list-wrapper {
         position: absolute;
+        width: 100%;
         left: 30px;
         top: 40px;
+        font-size: 16px;
+        max-height: calc(50% - 8rem);
+        height: calc(50% - 8rem);
       }
+      #file-list {
+        width: 100%;
+        height: 100%;
+        line-height: 1.5;
+        overflow-y: auto;
+        font-size: 1.2rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      }
+      #file-list li {
+        display: inline-block;
+        background-color: #fff;
+        margin-bottom: 12px;
+        padding: 8px 16px;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        transition: background-color 0.3s ease;
+      }
+      ul#file-list li a {
+        text-decoration: none;
+        color: #007acc;
+        font-weight: 500;
+        font-size: 1rem;
+        display: inline-block;
+        width: 100%;
+      }
+
+      ul#file-list li a:hover {
+        text-decoration: underline;
+      }
+
     </style>
   </head>
 
   <body>
     <div class="list-wrapper">
-      <h1>OSS 文件列表</h1>
-      <ul id="file-list">加载中……</ul>
+      <div>OSS 文件列表</div>
+      <ul id="file-list">
+        加载中……
+      </ul>
     </div>
 
     <div class="info">
@@ -63,6 +99,6 @@
       </span>
     </div>
 
-    <script src="/scripts/generate-file-path.js" defer></script>
+    <!-- <script src="/scripts/generate-file-path.js" defer></script> -->
   </body>
 </html>
