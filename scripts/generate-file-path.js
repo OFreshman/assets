@@ -5,6 +5,7 @@ fetch('/files.json')
     return res.json();
   })
   .then(items => {
+    console.log(4444444, items);
     const ul = document.getElementById('file-list');
     ul.innerHTML = '';  // 清空 loading 文本
     items.forEach(({ name, url }) => {
