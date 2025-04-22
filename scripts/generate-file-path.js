@@ -1,5 +1,5 @@
 
-fetch('/files.json')
+fetch('/public/files.json')
   .then(res => {
     if (!res.ok) throw new Error('无法加载 files.json');
     return res.json();
