@@ -1,7 +1,6 @@
 [build]
 publish = "public"
 command = "node scripts/generate-file-data.js"
-publish = "public"
 
 [[redirects]]
 from = "/files/*"
