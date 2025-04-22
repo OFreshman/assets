@@ -17,6 +17,12 @@
         font-weight: normal;
         font-style: normal;
       }
+      @font-face {
+        font-family: 'No.019-Sounso-Quality';
+        src: url('/static/fonts/No.019-Sounso-Quality-2.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+      }
       * {
         margin: 0;
         padding: 0;
@@ -66,7 +72,10 @@
       }
       .title {
         margin-bottom: 10px;
-        font-family: 'Neo Sci-Fi', 'ZiXinFangMengHuanGeTeTi', sans-serif;
+        font-family: 'ZiXinFangMengHuanGeTeTi', sans-serif;
+      }
+      .title span {
+        font-family: 'SongForJennifer', sans-serif;
       }
       #file-list {
         width: 100%;
@@ -99,7 +108,7 @@
         font-size: 1rem;
         display: inline-block;
         width: 100%;
-        font-family: 'SongForJennifer';
+        font-family: 'No.019-Sounso-Quality';
       }
 
       ul#file-list li a:hover {
@@ -111,7 +120,7 @@
 
   <body>
     <div class="list-wrapper">
-      <div class="title">OSS 文件列表</div>
+      <div class="title">【<span>OSS</span></span> 文件列表】</div>
       <ul id="file-list">
         加载中……
       </ul>
