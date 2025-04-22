@@ -5,7 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ethan-oss</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap" rel="stylesheet">
     <style>
+      @font-face {
+        font-family: 'SongForJennifer';
+        src: url('/static/fonts/a-song-for-jennifer-3.ttf') format('truetype');
+      }
+      @font-face {
+        font-family: 'ZiXinFangMengHuanGeTeTi';
+        src: url('/static/fonts/ZiXinFangMengHuanGeTeTi-2.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+      }
       * {
         margin: 0;
         padding: 0;
@@ -32,6 +43,7 @@
         background-clip: text;
         -webkit-background-clip: text;
         animation: gradientAnimation 4s linear infinite;
+        font-family: 'ZiXinFangMengHuanGeTeTi';
       }
 
       @keyframes gradientAnimation {
@@ -45,25 +57,36 @@
       }
       .list-wrapper {
         position: absolute;
-        width: 100%;
+        width: calc(100% - 60px);
         left: 30px;
         top: 40px;
         font-size: 16px;
         max-height: calc(50% - 8rem);
         height: calc(50% - 8rem);
       }
+      .title {
+        margin-bottom: 10px;
+        font-family: 'Neo Sci-Fi', 'ZiXinFangMengHuanGeTeTi', sans-serif;
+      }
       #file-list {
         width: 100%;
         height: 100%;
         line-height: 1.5;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        align-content: flex-start;
+        row-gap: 8px;
         overflow-y: auto;
         font-size: 1.2rem;
+        border: 1px solid #fff;
+        border-radius: 8px;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
       }
       #file-list li {
-        display: inline-block;
-        margin: 12px;
-        background-color: #fff;
+        margin: 12px 0 0 12px;
+        background-color: #fafafa;
         padding: 8px 16px;
         border-radius: 8px;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
@@ -76,6 +99,7 @@
         font-size: 1rem;
         display: inline-block;
         width: 100%;
+        font-family: 'SongForJennifer';
       }
 
       ul#file-list li a:hover {
@@ -87,7 +111,7 @@
 
   <body>
     <div class="list-wrapper">
-      <div>OSS 文件列表</div>
+      <div class="title">OSS 文件列表</div>
       <ul id="file-list">
         加载中……
       </ul>
