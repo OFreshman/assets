@@ -8,6 +8,12 @@ from = "/files/*"
 to = "/files/:splat"
 status = 200
 
+# 重定向脚本文件
+[[redirects]]
+from = "/scripts/*"
+to = "/scripts/:splat"
+status = 200
+
 [[redirects]]
 from = "/*"
 to = "public/index.html"
