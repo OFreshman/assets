@@ -1,3 +1,4 @@
+
 fetch('/files.json')
   .then(res => {
     if (!res.ok) throw new Error('无法加载 files.json');
