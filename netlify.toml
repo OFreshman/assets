@@ -1,10 +1,15 @@
 [build]
-publish = "public"
+#publish = "public"
 command = "node scripts/generate-file-data.js"
 
 [[redirects]]
 from = "/files/*"
 to = "/files/:splat"
+status = 200
+
+[[redirects]]
+from = "/scripts/*"
+to = "/scripts/:splat"
 status = 200
 
 [[redirects]]
